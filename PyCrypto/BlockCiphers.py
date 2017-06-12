@@ -93,8 +93,8 @@ class MGvDES3:
 
 
 def main():
-    msg = "My name is Manish Gaurav."
-    key = "Secret Key"
+    msg = "Progress isn't made by early risers. It's made by lazy men trying to find easier ways to do something."
+    key = "--Robert Heinlein"
     # if msg and key are not in bytes, they must be converted to bytes
     msg = msg.encode('utf-8')
     key = key.encode('utf-8')
@@ -119,7 +119,7 @@ def main():
     print("Plaintext:\t", plaintext)
 
     """ DES3 ECB Example """
-    des3 = MGvDES3()  # Des3 encryption with keysize of 16 bytes
+    des3 = MGvDES3()  # DES3 encryption with keysize of 16 bytes
     ciphertext = des3.encrypt(msg, key)
     print("Ciphertext:\t", ciphertext)
     plaintext = des3.decrypt(ciphertext, key)
