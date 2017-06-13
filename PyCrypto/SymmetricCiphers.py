@@ -4,9 +4,10 @@ import Crypto.Cipher.AES as CCAES
 import Crypto.Cipher.DES3 as CCDES3
 import Crypto.Random as CR
 
-""" A class that implements AES Encryption/Decryption Scheme in ECB/CBC mode
+""" A wrapper class for AES Encryption/Decryption in ECB/CBC mode
     Note: plaintext, key, iv must be in bytes, ciphertext is also in bytes
 """
+
 
 class AES:
     def __init__(self, keysize=16):
@@ -47,9 +48,11 @@ class AES:
             return key[:self.keysize]
 
 
-""" A class that implements DES3 Encryption/Decryption Scheme in ECB/CBC mode
+""" A wrapper class for DES3 Encryption/Decryption Scheme in ECB/CBC mode
     Note: plaintext, key, iv must be in bytes, ciphertext is also in bytes
 """
+
+
 class DES3:
     def __init__(self, keysize=16):
         self.blocksize = 8  # DES3 blocksize is 8 bytes
